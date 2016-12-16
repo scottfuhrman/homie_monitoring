@@ -127,7 +127,7 @@ void setup() {
   locDomainSetting.setDefaultValue("unknown");
   locAreaSetting.setDefaultValue("unknown");
 
-  Homie_setFirmware("snowbat", "1.0.0");
+  Homie_setFirmware("snowbat", "1.0.1");
   Homie.setSetupFunction(setupHandler).setLoopFunction(loopHandler);
   Homie.setLedPin(D4, LOW);
 
