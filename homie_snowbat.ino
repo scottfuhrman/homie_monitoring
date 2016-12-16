@@ -129,6 +129,8 @@ void setup() {
 
   Homie_setFirmware("snowbat", "1.0.0");
   Homie.setSetupFunction(setupHandler).setLoopFunction(loopHandler);
+  Homie.setLedPin(D4, LOW);
+
 
   //temperatureNode.advertise("unit");
   //temperatureNode.advertise("degrees");

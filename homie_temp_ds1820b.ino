@@ -21,9 +21,9 @@ void setupHandler() {
   temperatureNode.setProperty("unit").send("f");
   locationNode.setProperty("state").send(locStateSetting.get());
   locationNode.setProperty("city").send(locCitySetting.get());
-  locationNode.setProperty("domain").send(locDomainSetting.get()); 
-  locationNode.setProperty("area").send(locAreaSetting.get());  
- 
+  locationNode.setProperty("domain").send(locDomainSetting.get());
+  locationNode.setProperty("area").send(locAreaSetting.get());
+
 
 }
 
@@ -55,9 +55,9 @@ void setup() {
   locDomainSetting.setDefaultValue("unknown");
   locAreaSetting.setDefaultValue("unknown");
 
-  Homie_setFirmware("temperature", "1.1.0");
+  Homie_setFirmware("temperature", "1.1.1");
   Homie.setSetupFunction(setupHandler).setLoopFunction(loopHandler);
-
+  Homie.setLedPin(D4, LOW);
   temperatureNode.advertise("unit");
   temperatureNode.advertise("degrees");
   locationNode.advertise("city");
